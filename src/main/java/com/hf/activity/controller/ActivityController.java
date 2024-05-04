@@ -61,7 +61,7 @@ public class ActivityController {
         return new ResponseEntity<>(updatedActivity, HttpStatus.OK);
     }
 
-    @GetMapping("/progress/{userId}")
+    @GetMapping("/{userId}/progress")
     public ResponseEntity<Long> getProgress(@PathVariable Long userId) {
         Long progress = activityService.getProgress(userId);
         return new ResponseEntity<>(progress, HttpStatus.OK);
